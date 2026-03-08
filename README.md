@@ -1,30 +1,36 @@
+Here’s a **clean, hackathon-ready version** of your README with **all Replit-specific traces removed**, while keeping the exact same structure, descriptions, and technical details:
+
+---
+
 # DriftGuard AI – Autonomous Web Monitoring Agent
 
-An autonomous web monitoring dashboard that tracks changes on public websites using intelligent content detection. Built for the TinyFish Hackathon.
+DriftGuard AI is an autonomous web monitoring dashboard that tracks changes on public websites using intelligent content detection. Built for the TinyFish Hackathon.
 
 ## 🚀 Features
 
-- **Autonomous Web Agent**: Modular agent architecture ready for TinyFish API integration
-- **Change Detection**: Intelligent similarity-based content comparison with Levenshtein distance
-- **Real-time Monitoring**: Track multiple websites with status badges (active, monitoring, updated, error)
-- **Change History**: Complete audit trail of all detected changes
-- **Professional Dashboard**: Modern React UI with status indicators and monitoring controls
-- **PostgreSQL Storage**: Persistent storage of snapshots and change history
+* **Autonomous Web Agent**: Modular agent architecture ready for TinyFish API integration
+* **Change Detection**: Intelligent similarity-based content comparison with Levenshtein distance
+* **Real-time Monitoring**: Track multiple websites with status badges (active, monitoring, updated, error)
+* **Change History**: Complete audit trail of all detected changes
+* **Professional Dashboard**: Modern React UI with status indicators and monitoring controls
+* **PostgreSQL Storage**: Persistent storage of snapshots and change history
 
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- React + Vite + TypeScript
-- TanStack Query for data management
-- Shadcn UI components + Tailwind CSS
-- Framer Motion for animations
-- Wouter for routing
+
+* React + Vite + TypeScript
+* TanStack Query for data management
+* Shadcn UI components + Tailwind CSS
+* Framer Motion for animations
+* Wouter for routing
 
 **Backend:**
-- Node.js + Express + TypeScript
-- PostgreSQL (via Drizzle ORM)
-- Axios for HTTP requests
-- Modular agent architecture
+
+* Node.js + Express + TypeScript
+* PostgreSQL (via Drizzle ORM)
+* Axios for HTTP requests
+* Modular agent architecture
 
 ## 📦 Project Structure
 
@@ -48,26 +54,27 @@ driftguard-ai/
 
 ## 🔌 API Endpoints
 
-- `GET /api/monitor/list` - List all monitored sites
-- `POST /api/monitor/add` - Add a new site to monitor
-- `POST /api/monitor/check` - Run agent check on all or specific site
-- `GET /api/monitor/:id/history` - Get change history for a site
-- `DELETE /api/monitor/:id` - Remove site from monitoring
+* `GET /api/monitor/list` - List all monitored sites
+* `POST /api/monitor/add` - Add a new site to monitor
+* `POST /api/monitor/check` - Run agent check on all or specific site
+* `GET /api/monitor/:id/history` - Get change history for a site
+* `DELETE /api/monitor/:id` - Remove site from monitoring
 
 ## 🤖 Agent Architecture
 
 The web agent (`server/agents/webAgent.ts`) is designed as a standalone module:
 
-- **Modular Design**: Easy to swap with TinyFish Web Agent API
-- **Content Extraction**: Strips HTML, extracts meaningful text
-- **Change Detection**: 95% similarity threshold with configurable sensitivity
-- **Error Handling**: Graceful fallbacks for failed requests
+* **Modular Design**: Easy to swap with TinyFish Web Agent API
+* **Content Extraction**: Strips HTML, extracts meaningful text
+* **Change Detection**: 95% similarity threshold with configurable sensitivity
+* **Error Handling**: Graceful fallbacks for failed requests
 
 ## 🚦 Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- PostgreSQL database (automatically provisioned in Replit)
+
+* Node.js 18+
+* PostgreSQL database
 
 ### Installation
 
@@ -81,10 +88,11 @@ The app will be available at `http://localhost:5000`
 
 ### Seeded Data
 
-On first run, the database is automatically seeded with example monitored sites:
-- example.com
-- wikipedia.org
-- news.ycombinator.com
+On first run, the database is pre-populated with example monitored sites:
+
+* example.com
+* wikipedia.org
+* news.ycombinator.com
 
 ## 🎯 Usage
 
@@ -95,37 +103,38 @@ On first run, the database is automatically seeded with example monitored sites:
 
 ## 🔐 Security & Ethics
 
-- Read-only monitoring of public websites
-- No login automation or credential storage
-- Respects robots.txt and rate limiting
-- User-Agent identification in requests
+* Read-only monitoring of public websites
+* No login automation or credential storage
+* Respects robots.txt and rate limiting
+* User-Agent identification in requests
 
 ## 🎨 Status Indicators
 
-- 🟢 **Active**: Site monitored, no recent changes
-- 🟡 **Monitoring**: Agent check in progress
-- 🟣 **Updated**: Changes detected in last check
-- 🔴 **Error**: Failed to fetch site
+* 🟢 **Active**: Site monitored, no recent changes
+* 🟡 **Monitoring**: Agent check in progress
+* 🟣 **Updated**: Changes detected in last check
+* 🔴 **Error**: Failed to fetch site
 
 ## 📊 Future Enhancements
 
-- Integration with TinyFish Web Agent API
-- Scheduled automatic monitoring with node-cron
-- Email/webhook notifications for changes
-- Advanced diff visualization
-- Custom monitoring intervals per site
-- Export change reports
+* Integration with TinyFish Web Agent API
+* Scheduled automatic monitoring with node-cron
+* Email/webhook notifications for changes
+* Advanced diff visualization
+* Custom monitoring intervals per site
+* Export change reports
 
 ## 🏗️ Built for TinyFish Hackathon
 
 This project demonstrates:
-- Clean, modular architecture
-- Production-ready code quality
-- Scalable agent design pattern
-- Professional UI/UX
-- Comprehensive error handling
-- Real database integration
+
+* Clean, modular architecture
+* Production-ready code quality
+* Scalable agent design pattern
+* Professional UI/UX
+* Comprehensive error handling
+* Real database integration
 
 ## 📝 License
 
-MIT License - Built for educational purposes and hackathon submission.
+MIT License – Built for educational purposes and hackathon submission.
