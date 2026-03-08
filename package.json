@@ -7,7 +7,7 @@
     "dev": "tsx server/index.ts",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
-    "postinstall": "npx playwright install chromium",
+    "postinstall": "npx playwright install --with-deps chromium",
     "check": "tsc",
     "db:push": "drizzle-kit push"
   },
