@@ -1,6 +1,3 @@
-Here’s a **clean, hackathon-ready version** of your README with **all Replit-specific traces removed**, while keeping the exact same structure, descriptions, and technical details:
-
----
 
 # DriftGuard AI – Autonomous Web Monitoring Agent
 
