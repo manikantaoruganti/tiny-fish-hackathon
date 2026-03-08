@@ -138,3 +138,7 @@ This project demonstrates:
 ## 📝 License
 
 MIT License – Built for educational purposes and hackathon submission.
+
+🌐 Live Demo
+
+https://incomparable-yeot-ec5612.netlify.app/
