@@ -12,14 +12,21 @@ const httpServer = createServer(app);
  * 🔥 CORS CONFIG (Fixes frontend 5173 → backend 5000 errors)
  * NO wildcard "*" in app.options (prevents path-to-regexp crash)
  */
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Vite frontend
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  })
-);
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://incomparable-yeot-ec5612.netlify.app"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 
 // ✅ Proper preflight handler (SAFE — no "*" crash)
 app.use((req, res, next) => {

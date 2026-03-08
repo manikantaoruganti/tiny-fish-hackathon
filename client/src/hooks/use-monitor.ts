@@ -2,8 +2,8 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { api, buildUrl, type SiteInput } from "@shared/routes";
 
 // 🔥 DIRECT BACKEND URL (NO PROXY, NO REPLIT, NO 404)
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
+// const API_BASE = import.meta.env.VITE_API_URL;
+const API_BASE = "https://tiny-fish-hackathon-production.up.railway.app";
 // Safe JSON parser to prevent "Unexpected token <" crash
 async function safeJson(res: Response) {
   const text = await res.text();
